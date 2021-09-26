@@ -3,7 +3,8 @@
     <div class="container pt-3">
         <div class="card">
             <h5 class="card-header"> {{ post.title }} </h5>
-            <!-- img  -->
+            
+            <img v-if="post.image" :src="post.image" :alt="post.title">
             <div class="card-body">
                 <h5 class="card-title cat" v-if="post.cat_id">
                     {{ post.category.name}} 

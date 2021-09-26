@@ -43,8 +43,8 @@
 
                     <label for="tag . {{$loop->iteration}}" class="form-check-label pe-3">{{$tag->name}}</label>
 
-                    <input type="checkbox" value="{{$tag->id}}" class="form-check-input" id="tag . {{$loop->iteration}}" name="tags"
-                    @if(in_array($tag->id, old('tags', [])))checked @endif name="tags[]"/>
+                    <input type="checkbox" value="{{$tag->id}}" class="form-check-input" id="tag . {{$loop->iteration}}" name="tags[]"
+                    @if(in_array($tag->id, old('tags', [])))checked @endif/>
 
                 </div> 
             @endforeach
